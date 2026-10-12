@@ -17,4 +17,4 @@ graph LR
     A[Fuente de datos] --> B[Ingesta]
     B --> C[Almacenamiento]
     C --> D[Procesamiento]
-    D --> E[Visualización / modelo]
+    D --> E[Visualización / modelo]# bigdata-p2-itaca

@@ -1,7 +1,5 @@
 # Datos y credenciales
-data/raw/
-data/*.csv
-data/*.json
+data/
 .env
 *.pem
 

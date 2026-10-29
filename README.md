@@ -1,16 +1,10 @@
-# Proyecto N · [Título del proyecto]
-
-> **Plantilla.** Sustituye todo lo que va entre corchetes y borra las indicaciones en cursiva a medida que completes cada sección. Borra también las secciones de bloques que tu proyecto no trabaje.
+# Proyecto2 · Ingesta ITACA (BD relacional)
 
 ## Descripción y objetivo
 
-*Dos o tres líneas: qué problema resuelve el proyecto, con qué datos y qué resultado final se obtiene (dashboard, modelo…).*
-
-[Descripción]
+Pipeline de ingesta de los datos académicos de ITACA (alumnos, calificaciones, módulos y cursos) de los cursos 2021-22 a 2025-26. Los volcados SQL se cargan en PostgreSQL y desde ahí se extraen a JSON por curso escolar en `data/raw/`, con el NIA anonimizado, como base para la ETL y el análisis posterior.
 
 ## Arquitectura
-
-*Diagrama del pipeline completo. Empieza con uno provisional en el Bloque 0 y actualízalo al terminar cada bloque.*
 
 ```mermaid
 graph LR
@@ -108,5 +102,3 @@ python ingesta/ingesta_itaca_bd.py
 Cada ejecución sobrescribe los JSON existentes. `data/raw/` no se versiona (está en `.gitignore`).
 
 **Nota sobre los datos:** en 2023-24 hay 9 NIA con calificaciones que no aparecen en `alumnos` de ese curso. Viene así del origen, no de la anonimización.
-
-# bigdata-p2-itaca
